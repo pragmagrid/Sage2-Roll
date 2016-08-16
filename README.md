@@ -58,9 +58,10 @@ More in depth instructions (not specific to Rocks) can be found at the [Sage2 we
 * Inside the /opt/Sage2 folder, go to the keys folder and edit the GO-linux script adding the ip address you wish to connect to the 	     Sage2 server at inside the servers variable. 
 *       run the GO-linux script with:
 		# ./GO-linux  
-* Now go back to the main Sage2 directory and run the command:    
-*       # npm install in
-    This will install all the needed NodeJS dependencies for Sage2
+* Now go back to the main Sage2 directory and run the command:
+* 	npm run in
+
+* This will install all the needed NodeJS dependencies for Sage2
 
 **Starting the Sage2 Server**
 
