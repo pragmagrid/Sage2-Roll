@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!-- git web interface version 1.7.10.4, (C) 2005-2006, Kay Sievers <kay.sievers@vrfy.org>, Christian Gierke -->
+<!-- git core binaries version 1.7.10.4 -->
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8"/>
+<meta name="generator" content="gitweb/1.7.10.4 git/1.7.10.4"/>
+<meta name="robots" content="index, nofollow"/>
+<title>git.videolan.org Git - x264.git/summary</title>
+<link rel="stylesheet" type="text/css" href="/gitweb.css"/>
+<link rel="alternate" title="x264.git - log - RSS feed" href="/?p=x264.git;a=rss" type="application/rss+xml" />
+<link rel="alternate" title="x264.git - log - RSS feed (no merges)" href="/?p=x264.git;a=rss;opt=--no-merges" type="application/rss+xml" />
+<link rel="alternate" title="x264.git - log - Atom feed" href="/?p=x264.git;a=atom;opt=--no-merges" type="application/atom+xml" />
+<link rel="alternate" title="x264.git - log - Atom feed (no merges)" href="/?p=x264.git;a=atom;opt=--no-merges" type="application/atom+xml" />
+<link rel="shortcut icon" href="/git-favicon.png" type="image/png" />
+</head>
+<body>
+<div class="page_header">
+<a title="git homepage" href="http://git-scm.com/"><img class="logo" height="27" src="/git-logo.png" alt="git" width="72" /></a><a href="/">git.videolan.org</a> / <a href="/?p=x264.git;a=summary">x264.git</a> / summary
+</div>
+<form method="get" action="/" enctype="application/x-www-form-urlencoded">
+<div class="search">
+<input name="p" type="hidden" value="x264.git" />
+<input name="a" type="hidden" value="search" />
+<input name="h" type="hidden" value="HEAD" />
+<select name="st" >
+<option selected="selected" value="commit">commit</option>
+<option value="grep">grep</option>
+<option value="author">author</option>
+<option value="committer">committer</option>
+<option value="pickaxe">pickaxe</option>
+</select><sup><a href="/?p=x264.git;a=search_help">?</a></sup> search:
+<input type="text" name="s"  />
+<span title="Extended regular expression"><label><input type="checkbox" name="sr" value="1" />re</label></span></div>
+</form>
+<div class="page_nav">
+summary | <a href="/?p=x264.git;a=shortlog">shortlog</a> | <a href="/?p=x264.git;a=log">log</a> | <a href="/?p=x264.git;a=commit;h=3f5ed56d4105f68c01b86f94f41bb9bbefa3433b">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=3f5ed56d4105f68c01b86f94f41bb9bbefa3433b">commitdiff</a> | <a href="/?p=x264.git;a=tree">tree</a><br/>
+<br/>
+</div>
+<div class="title">&nbsp;</div>
+<table class="projects_list">
+<tr id="metadata_desc"><td>description</td><td>x264 Main Development tree.</td></tr>
+<tr id="metadata_owner"><td>owner</td><td>VideoLAN</td></tr>
+<tr id="metadata_lchange"><td>last change</td><td><span class="datetime">Mon, 13 Jun 2016 20:07:00 +0000</span> (22:07 +0200)</td></tr>
+<tr class="metadata_url"><td>URL</td><td>https://git.videolan.org/git/x264.git</td></tr>
+</table>
+<div class="header">
+<a class="title" href="/?p=x264.git;a=shortlog">shortlog</a>
+</div>
+<table class="shortlog">
+<tr class="dark">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Henrik Gramner" class="list" href="/?p=x264.git;a=search;s=Henrik+Gramner;st=author">Henrik Gramner</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=3f5ed56d4105f68c01b86f94f41bb9bbefa3433b">configure: Support specifying a custom pkg-config</a> <span class="refs"> <span class="head" title="heads/master"><a href="/?p=x264.git;a=shortlog;h=refs/heads/master">master</a></span></span></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=3f5ed56d4105f68c01b86f94f41bb9bbefa3433b">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=3f5ed56d4105f68c01b86f94f41bb9bbefa3433b">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=3f5ed56d4105f68c01b86f94f41bb9bbefa3433b;hb=3f5ed56d4105f68c01b86f94f41bb9bbefa3433b">tree</a></td>
+</tr>
+<tr class="light">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=7c9c687d8062f72b3ec300de8997bdae8277a741">Add support for new VUI parameters</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=7c9c687d8062f72b3ec300de8997bdae8277a741">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=7c9c687d8062f72b3ec300de8997bdae8277a741">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=7c9c687d8062f72b3ec300de8997bdae8277a741;hb=7c9c687d8062f72b3ec300de8997bdae8277a741">tree</a></td>
+</tr>
+<tr class="dark">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Henrik Gramner" class="list" href="/?p=x264.git;a=search;s=Henrik+Gramner;st=author">Henrik Gramner</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=92515e8ff73491ef8a44c85e0bee265ba5791070">configure: Add link-time optimization support</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=92515e8ff73491ef8a44c85e0bee265ba5791070">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=92515e8ff73491ef8a44c85e0bee265ba5791070">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=92515e8ff73491ef8a44c85e0bee265ba5791070;hb=92515e8ff73491ef8a44c85e0bee265ba5791070">tree</a></td>
+</tr>
+<tr class="light">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Henrik Gramner" class="list" href="/?p=x264.git;a=search;s=Henrik+Gramner;st=author">Henrik Gramner</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=b6267e0ff770545de88dfb5d3f176ea73f453730">configure: Fix clang detection with versioned binaries</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=b6267e0ff770545de88dfb5d3f176ea73f453730">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=b6267e0ff770545de88dfb5d3f176ea73f453730">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=b6267e0ff770545de88dfb5d3f176ea73f453730;hb=b6267e0ff770545de88dfb5d3f176ea73f453730">tree</a></td>
+</tr>
+<tr class="dark">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Janne Grunau" class="list" href="/?p=x264.git;a=search;s=Janne+Grunau;st=author">Janne Grunau</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=14a58532fea2c5f9e7b93c918476d842091c4268">arm: Add asm for mbtree fixed point conversion</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=14a58532fea2c5f9e7b93c918476d842091c4268">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=14a58532fea2c5f9e7b93c918476d842091c4268">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=14a58532fea2c5f9e7b93c918476d842091c4268;hb=14a58532fea2c5f9e7b93c918476d842091c4268">tree</a></td>
+</tr>
+<tr class="light">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Janne Grunau" class="list" href="/?p=x264.git;a=search;s=Janne+Grunau;st=author">Janne Grunau</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=b6f189eb4c5646483f7901293944695167e71ed9">aarch64: Add asm for mbtree fixed point conversion</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=b6f189eb4c5646483f7901293944695167e71ed9">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=b6f189eb4c5646483f7901293944695167e71ed9">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=b6f189eb4c5646483f7901293944695167e71ed9;hb=b6f189eb4c5646483f7901293944695167e71ed9">tree</a></td>
+</tr>
+<tr class="dark">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=a5e06b9a435852f0125de4ecb198ad47340483fa">Fix p4x4 analyse for 4:4:4 encoding with chroma ME</a> <span class="refs"> <span class="head" title="heads/stable"><a href="/?p=x264.git;a=shortlog;h=refs/heads/stable">stable</a></span></span></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=a5e06b9a435852f0125de4ecb198ad47340483fa">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=a5e06b9a435852f0125de4ecb198ad47340483fa">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=a5e06b9a435852f0125de4ecb198ad47340483fa;hb=a5e06b9a435852f0125de4ecb198ad47340483fa">tree</a></td>
+</tr>
+<tr class="light">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=07221290db0a94bda1f6ece3fdf3c02675c8adce">Fix 4:4:4 encoding with CQM</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=07221290db0a94bda1f6ece3fdf3c02675c8adce">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=07221290db0a94bda1f6ece3fdf3c02675c8adce">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=07221290db0a94bda1f6ece3fdf3c02675c8adce;hb=07221290db0a94bda1f6ece3fdf3c02675c8adce">tree</a></td>
+</tr>
+<tr class="dark">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=23ebc1f763936b7fcfc81e21530e1b65dbc503b9">Fix p4x4 RDO with CAVLC</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=23ebc1f763936b7fcfc81e21530e1b65dbc503b9">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=23ebc1f763936b7fcfc81e21530e1b65dbc503b9">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=23ebc1f763936b7fcfc81e21530e1b65dbc503b9;hb=23ebc1f763936b7fcfc81e21530e1b65dbc503b9">tree</a></td>
+</tr>
+<tr class="light">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=740a8c556bd9b68e899d6991f3f987a443aa14aa">Apply zone options a little bit earlier</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=740a8c556bd9b68e899d6991f3f987a443aa14aa">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=740a8c556bd9b68e899d6991f3f987a443aa14aa">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=740a8c556bd9b68e899d6991f3f987a443aa14aa;hb=740a8c556bd9b68e899d6991f3f987a443aa14aa">tree</a></td>
+</tr>
+<tr class="dark">
+<td title="5 weeks ago"><i>2016-06-13</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" title="Fix corruption when using encoder_reconfig() with some parameters" href="/?p=x264.git;a=commit;h=928bd9d5def4f0ca5071ea176a11b816a01e6495">Fix corruption when using encoder_reconfig() with some... </a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=928bd9d5def4f0ca5071ea176a11b816a01e6495">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=928bd9d5def4f0ca5071ea176a11b816a01e6495">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=928bd9d5def4f0ca5071ea176a11b816a01e6495;hb=928bd9d5def4f0ca5071ea176a11b816a01e6495">tree</a></td>
+</tr>
+<tr class="light">
+<td title="3 months ago"><i>2016-04-20</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=3b70645597bea052d2398005bc723212aeea6875">Clean up header includes</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=3b70645597bea052d2398005bc723212aeea6875">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=3b70645597bea052d2398005bc723212aeea6875">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=3b70645597bea052d2398005bc723212aeea6875;hb=3b70645597bea052d2398005bc723212aeea6875">tree</a></td>
+</tr>
+<tr class="dark">
+<td title="3 months ago"><i>2016-04-20</i></td>
+<td class="author"><a title="Search for commits authored by Henrik Gramner" class="list" href="/?p=x264.git;a=search;s=Henrik+Gramner;st=author">Henrik Gramner</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=2102de2584e03fce4abac49eb37d5d7a0803380f">Eliminate some compiler warnings on BSD</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=2102de2584e03fce4abac49eb37d5d7a0803380f">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=2102de2584e03fce4abac49eb37d5d7a0803380f">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=2102de2584e03fce4abac49eb37d5d7a0803380f;hb=2102de2584e03fce4abac49eb37d5d7a0803380f">tree</a></td>
+</tr>
+<tr class="light">
+<td title="3 months ago"><i>2016-04-12</i></td>
+<td class="author"><a title="Search for commits authored by Henrik Gramner" class="list" href="/?p=x264.git;a=search;s=Henrik+Gramner;st=author">Henrik Gramner</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=64f4e24909924fceeea6e154d71b7dfbf586c7ea">osx: Add -D_DARWIN_C_SOURCE to CFLAGS</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=64f4e24909924fceeea6e154d71b7dfbf586c7ea">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=64f4e24909924fceeea6e154d71b7dfbf586c7ea">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=64f4e24909924fceeea6e154d71b7dfbf586c7ea;hb=64f4e24909924fceeea6e154d71b7dfbf586c7ea">tree</a></td>
+</tr>
+<tr class="dark">
+<td title="3 months ago"><i>2016-04-12</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=00597d74c6223f3694e2c6614ef0574d7fca6b22">Remove an unused parameter from x264_slicetype_frame_cost()</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=00597d74c6223f3694e2c6614ef0574d7fca6b22">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=00597d74c6223f3694e2c6614ef0574d7fca6b22">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=00597d74c6223f3694e2c6614ef0574d7fca6b22;hb=00597d74c6223f3694e2c6614ef0574d7fca6b22">tree</a></td>
+</tr>
+<tr class="light">
+<td title="3 months ago"><i>2016-04-12</i></td>
+<td class="author"><a title="Search for commits authored by Anton Mitrofanov" class="list" href="/?p=x264.git;a=search;s=Anton+Mitrofanov;st=author">Anton Mitrofanov</a></td><td><a class="list subject" href="/?p=x264.git;a=commit;h=aa26e880bc2cd04cc81c776051d5e21d03fc975a">Improve the --b-adapt 1 algorithm</a></td>
+<td class="link"><a href="/?p=x264.git;a=commit;h=aa26e880bc2cd04cc81c776051d5e21d03fc975a">commit</a> | <a href="/?p=x264.git;a=commitdiff;h=aa26e880bc2cd04cc81c776051d5e21d03fc975a">commitdiff</a> | <a href="/?p=x264.git;a=tree;h=aa26e880bc2cd04cc81c776051d5e21d03fc975a;hb=aa26e880bc2cd04cc81c776051d5e21d03fc975a">tree</a></td>
+</tr>
+<tr>
+<td colspan="4"><a href="/?p=x264.git;a=shortlog">...</a></td>
+</tr>
+</table>
+<div class="header">
+<a class="title" href="/?p=x264.git;a=heads">heads</a>
+</div>
+<table class="heads">
+<tr class="dark">
+<td><i>5 weeks ago</i></td>
+<td class="current_head"><a class="list name" href="/?p=x264.git;a=shortlog;h=refs/heads/master">master</a></td>
+<td class="link"><a href="/?p=x264.git;a=shortlog;h=refs/heads/master">shortlog</a> | <a href="/?p=x264.git;a=log;h=refs/heads/master">log</a> | <a href="/?p=x264.git;a=tree;h=refs/heads/master;hb=refs/heads/master">tree</a></td>
+</tr><tr class="light">
+<td><i>5 weeks ago</i></td>
+<td><a class="list name" href="/?p=x264.git;a=shortlog;h=refs/heads/stable">stable</a></td>
+<td class="link"><a href="/?p=x264.git;a=shortlog;h=refs/heads/stable">shortlog</a> | <a href="/?p=x264.git;a=log;h=refs/heads/stable">log</a> | <a href="/?p=x264.git;a=tree;h=refs/heads/stable;hb=refs/heads/stable">tree</a></td>
+</tr></table>
+<div class="header">
+<a class="title" href="/?p=x264.git;a=forks">forks</a>
+</div>
+<table class="project_list">
+<tr class="dark">
+<td></td>
+<td><a class="list" href="/?p=x264/x264-sandbox.git;a=summary">x264/x264-sandbox.git</a></td>
+<td><a class="list" title="x264 Sandbox Developement tree." href="/?p=x264/x264-sandbox.git;a=summary">x264 Sandbox Developement... </a></td>
+<td><i></i></td>
+<td class="age2">5 weeks ago</td>
+<td class="link"><a href="/?p=x264/x264-sandbox.git;a=summary">summary</a> | <a href="/?p=x264/x264-sandbox.git;a=shortlog">shortlog</a> | <a href="/?p=x264/x264-sandbox.git;a=log">log</a> | <a href="/?p=x264/x264-sandbox.git;a=tree">tree</a></td>
+</tr>
+<tr class="light">
+<td></td>
+<td><a class="list" href="/?p=x264/x264-danielhlarkin.git;a=summary">x264/x264-danielhlarkin.git</a></td>
+<td><a class="list" title="[GSoC_2011] danielhlarkin's x264 repo" href="/?p=x264/x264-danielhlarkin.git;a=summary">[GSoC_2011] danielhlarkin... </a></td>
+<td><i>danielhlarkin</i></td>
+<td class="age2">4 years ago</td>
+<td class="link"><a href="/?p=x264/x264-danielhlarkin.git;a=summary">summary</a> | <a href="/?p=x264/x264-danielhlarkin.git;a=shortlog">shortlog</a> | <a href="/?p=x264/x264-danielhlarkin.git;a=log">log</a> | <a href="/?p=x264/x264-danielhlarkin.git;a=tree">tree</a></td>
+</tr>
+<tr class="dark">
+<td></td>
+<td><a class="list" href="/?p=x264/x264-dylanza.git;a=summary">x264/x264-dylanza.git</a></td>
+<td><a class="list" title="[GSoC_2009] Dylanza's x264 repo" href="/?p=x264/x264-dylanza.git;a=summary">[GSoC_2009] Dylanza's x264... </a></td>
+<td><i>dylanza</i></td>
+<td class="age2">7 years ago</td>
+<td class="link"><a href="/?p=x264/x264-dylanza.git;a=summary">summary</a> | <a href="/?p=x264/x264-dylanza.git;a=shortlog">shortlog</a> | <a href="/?p=x264/x264-dylanza.git;a=log">log</a> | <a href="/?p=x264/x264-dylanza.git;a=tree">tree</a></td>
+</tr>
+</table>
+<div class="page_footer">
+<div class="page_footer_text">x264 Main Development tree.</div>
+<a class="rss_logo" title="log RSS feed" href="/?p=x264.git;a=rss">RSS</a>
+<a class="rss_logo" title="log Atom feed" href="/?p=x264.git;a=atom">Atom</a>
+</div>
+<script type="text/javascript" src="static/gitweb.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+	var tz_cookie = { name: 'gitweb_tz', expires: 14, path: '/' };
+	onloadTZSetup('local', tz_cookie, 'datetime');
+};
+</script>
+</body>
+</html>
