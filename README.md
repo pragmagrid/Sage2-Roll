@@ -59,7 +59,7 @@ More in depth instructions (not specific to Rocks) can be found at the [Sage2 we
 *       run the GO-linux script with:
 		# ./GO-linux  
 * Now go back to the main Sage2 directory and run the command:
-* 	npm run in
+* 		# npm run in
 
 * This will install all the needed NodeJS dependencies for Sage2
 
@@ -67,7 +67,15 @@ More in depth instructions (not specific to Rocks) can be found at the [Sage2 we
 
 * In the main Sage2 folder, run:
 *       # node server.js
-    This will run the sage2 server process, however it will use the default config file that assumes your display wall contains only a single 1080p monitor, which must be changed if you your display wall's configuration differs from this.
+   
+	 This will run the sage2 server process, however it will use the default config file that assumes your display wall contains only a single 1080p monitor, which must be changed if you your display wall's configuration differs from this.
+* From your front end launch google chrome on each display node  by launching a google chrome window for each monitor in your Sage2 wall: 
+* 			# runuser -l WALL_USERNAME -c 'ssh -t NODE_HOST_NAME "export DISPLAY=CURRENT_DISPLAY && google-chrome --user-data-dir=~/.config/google-chrome/TILE_CONFIG_PROFILE --kiosk --app=https://SAGE2_SERVER_IP:SAGE2_PORT/display.html?clientID=TILE_ID "'&
 
-* The server can be exited by typing exit on the Sage2 sever console
+* WALL_USERNAME is the username you use to login to each compute node (in mine for instance its sageuser) while NODE_HOST_NAME is the hostname of the compute node (such as compute-0-0) you are logging into. 
+* CURRENT_DISPLAY is the output of $DISPLAY (assuming each display is it's own x window, which in my experience had alot less issues than with xinerama enabled) which is the monitor that you want to launch one part of your sage2 server on. This also ties in with the TILE_ID as that represents which part of the wall is displayed. For instance if you had a 4 monitor display wall client id 0 might be the top right part of the wall while id 3 is the lower right portion, it depends on your Sage2 config file.
+* TILE_CONFIG_PROFILE should be different for each monitor you are launching the sage2 server on as otherwise chrome will complain about having to share the same profile for multiple instances of chrome of the same username. 
+
+
+* The server can be exited by typing exit on the Sage2 sever console.
 
