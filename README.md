@@ -43,7 +43,7 @@ To install on a node, execute:
 * ~/Documents/SAGE2_MEDIA: Images, Videos, Pdfs...etc that are uploaded to the sage2 wall by users.
 * /opt/ffmpeg: depencency needed by sage2 to handle video files
 * /opt/gcc: version 4.8.2 of the gcc compiler, needed by NodeJS as the one included in Centos 6 is too old
-* /opt/x264, /opt/lame, /opt/libtheora, /opt/libvorbis, /opt/libwebp: Dependencies of for ffmpeg
+* /opt/x264, /opt/lame, /opt/libtheora, /opt/libvorbis, /opt/libwebp: Dependencies for ffmpeg
 * /opt/tiff: Dependency for Sage2
 * /opt/ImageMagick: Dependency of Sage2
 * /opt/Image-ExifTool: Dependency of Sage2 for reading exif data of images
