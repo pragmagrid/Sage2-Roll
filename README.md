@@ -56,9 +56,11 @@ More in depth instructions (not specific to Rocks) can be found at the [Sage2 we
 **Post Installation**
 	
 * Inside the /opt/Sage2 folder, go to the keys folder and edit servers variable of the GO-linux script with the ip address of the node that will be running the Sage2 server. 
-*       Then run the GO-linux script with:
-		# ./GO-linux  
-*	This will generate the self signed certificates needed for https connections (note, it is always better to use properly signed certificates but this will funciton if you are just trying to get Sage2 to work).
+* Then run the GO-linux script with:
+		
+*		# ./GO-linux  
+
+* This will generate the self signed certificates needed for https connections (note, it is always better to use properly signed certificates but this will funciton if you are just trying to get Sage2 to work).
 * Now go back to the main Sage2 directory and run the command:
 * 		# npm run in
 
