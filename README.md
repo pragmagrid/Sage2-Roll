@@ -86,5 +86,16 @@ More in depth instructions (not specific to Rocks) can be found at the [Sage2 we
 
 * 		# https://SAGE2_SERVER_IP:SAGE2_PORT
 * If you get the same security warning in your browser as described above, follow the same instructins proceed to the ip address of your sage2 server. 
+* Once you are at the main page of the sage2 server, it presents you with a simplified version of what is currently being displayed on the actual display wall with buttons going from left to right:
+	* SAGE2 Pointer takes control of your keyboard and mouse (has to be allowed in your browser settings) so your cursor movments are on the wall itself.
+	* Screen Sharing (currently for google chrome only with an extension) allows you to broadcast the contents of a window or the whole screen to the display wall.
+	* App launcher will open a window that shows all the possible apps that come with Sage2 (there is an api that allows you to develop your own as well) and allows limited interaction on this page while the full interaction is on the wall itself.
+	* Media browser shows a file explorer like window that allows you to launch pdfs, images, video files and more to be displayed on your display wall. In addition, it allows you to drag and drop new files from your desktop to be uploaded to the wall. 
+	* Arrangment allows you to take whatever is on the display wall currently and either clear it, make it tiled, or save the arrangement for later if it gets changed.
+	* The settings button allows you to customize the name that shows up when your cursor goes onto the display wall as well as the color. It also lets you choose the streaming quality if you want to share your screen.
+	* Information gives some details on the wall's configuration, the version of sage2, a link to the documentation, and some admin controls.
+	* Quick Note and Doodle allows you to place sticky notes on the wall and draw items respectively.
+* After activating the SAGE2 Pointer, you can right click to show the radial menu which allows you to do many of the same tasks as the main server webpage but in a format that is better suited to the wall. 
+* Once you launch an app on the sage wall, right clicking it while using the sage2 pointer will bring up any additional functionality that is available. For instance once a video is playing, right clicking the app will let you pause/play, scrub through, and stop the video app.
 
 
