@@ -66,6 +66,105 @@ More in depth instructions (not specific to Rocks) can be found at the [Sage2 we
 
 * This will install all the needed NodeJS dependencies for Sage2
 
+
+**Making a Sage2 Config File**
+
+From the [Sage2 bitbucket Wiki](https://bitbucket.org/sage2/sage2/wiki/Configuration):
+
+	{
+    host:                            // hostname or ip address of the web server
+    name:                            // OPTIONAL: name used in some UI (free string, defaults to hostname above)
+    port:                            // HTTP port that all clients, except web ui, are served on (default: 80)
+    secure_port:                     // HTTPS port that all clients are served on (default: 443)
+    rproxy_port:                     // OPTIONAL: port of the HTTP reverse proxy (only required for reverse proxy setups)
+    rproxy_secure_port:              // OPTIONAL: port of the HTTPS reverse proxy (only required for reverse proxy setups)
+    url:                             // OPTIONAL: URL shown on display, instead of using hostname (allows for short URL)
+    background: {
+        color:                       // CSS color for the background (hex, rgba(), etc.)
+        image: {                     // OPTIONAL: 
+            url:                     // relative path from the 'public' directory to an image used for the background
+            style:                   // either "fit", "stretch", or "tile"
+        }
+        watermark: {                 // OPTIONAL: 
+            svg:                     // relative path from the 'public' directory to a monochrome SVG image used for the watermark
+            color:                   // CSS color for the watermark (rgba() recommended)
+        }
+        clip:                        // OPTIONAL: boolean, whether or not to clip the display at the exact resolution (default: true)
+    }
+    register_site:                   // OPTIONAL: boolean, whether or to register to EVL site (for stats). (default: true)
+    ui: {
+        clock:                       // 12 or 24 (specifies whether to use a 12 or 24 hour clock)
+        show_url:                    // boolean, whether or not to show the host url on the display clients
+        show_version:                // boolean, whether or not to show the SAGE2 version number on the display clients
+        menubar: {                   // OPTIONAL: 
+            backgroundColor:         // OPTIONAL: CSS color for the background of the menubar (default: "rgba(0, 0, 0, 0.5)")
+            textColor:               // OPTIONAL: CSS color for the text of the menubar (default: "rgba(255, 255, 255, 1.0)")
+            remoteConnectedColor:    // OPTIONAL: CSS color for remote sites that are connected (default: "rgba(55, 153, 130, 1.0)")
+            remoteDisconnectedColor: // OPTIONAL: CSS color for remote sites that are not connected (default: "rgba(173, 42, 42, 1.0)")
+        }
+        auto_hide_ui:                // OPTIONAL: boolean, whether or not to autohide wall UI decoration (default: false)
+        auto_hide_delay:             // OPTIONAL: integer, number of seconds after which to hide the wall UI (default: 30)
+        auto_scale_ui:               // OPTIONAL: boolean, whether or not to automatically scale the wall UI based on resolution and screen dimensions (default: false)
+        calculate_viewing_distance:  // OPTIONAL: boolean, calculates the optimal viewing_distance for auto_scale_ui (default: false)
+        titleBarHeight:              // OPTIONAL: integer, specify window titlebar height in pixels (default: 2.5% of minimum dimension of total wall)
+        titleTextSize:               // OPTIONAL: integer, specify text size of ui titles in pixels (default: 1.5% of minimum dimension of total wall)
+        pointerSize:                 // OPTIONAL: integer, specify pointer size in pixels (default: 8% of minimum dimension of total wall)
+        noDropShadow:                // OPTIONAL: boolean, whether or not to disable drop shadows on wall UI decoration (default: false)
+        minWindowWidth:              // OPTIONAL: integer, minimum width for application windows in pixels (default: 8% of minimum dimension of total wall)
+        minWindowHeight:             // OPTIONAL: integer, maximum width for application windows in pixels (default: 120% of maximum dimension of total wall)
+        maxWindowWidth:              // OPTIONAL: integer, minimum height for application windows in pixels (default: 8% of minimum dimension of total wall)
+        maxWindowHeight:             // OPTIONAL: integer, maximum height for application windows in pixels (default: 120% of maximum dimension of total wall)
+        startup_sound:               // OPTIONAL: string, filename to a valid sound file played at startup (wav, mp3, ogg, ... depending on your browser).
+    }
+    resolution: {
+        width:                       // width in pixels of a display client (browser window width)
+        height:                      // height in pixels of a display client (browser window height)
+    },
+    dimensions: {
+        tile_width:                  // OPTIONAL: width of a single display tile in meters, pixel area
+        tile_height:                 // OPTIONAL: height of a single display tile in meters, pixel area
+        tile_borders:                // OPTIONAL: mullions in meters, object {left: xxx, right: , top: , bottom: }
+        tile_overlap:                // OPTIONAL: overlapping area for edge blending, integer in pixels {horizontal: xxx, vertical: xxx}
+        viewing_distance:            // OPTIONAL: preferred or common viewing distance in meters to calculate UI sizes
+    },
+    layout: {
+        rows:                        // number of rows of display clients (browser windows) that make up the display wall
+        columns:                     // number of columns of display clients (browser windows) that make up the display wall
+    },
+    displays: [                      // array of displays
+        {
+            row:                     // the row where this display tiles in the display wall (row origin starts with zero at left)
+            column:                  // the column where this display tiles in the display wall (column origin starts with zero at the top)
+        },
+        ...                          // list length should equal rows*columns
+    ],
+    alternate_hosts: [               // array of alternate hostnames for machine (i.e. private network IP, localhost, etc.)
+        ...
+    ],
+    remote_sites: [                  // array of remote SAGE2 sites to be able to share content with
+        {
+            name:                    // (string) name to be displayed on display wall
+            host:                    // (string) specify the remote machine to connect with (in conjunction with port)
+            port:                    // (number) specify the remote machine to connect with (in conjunction with host)
+            secure:                  // (bool)   specify if the URL is a secure connection or not (https vs http)
+            password:                // (string) clear text password to connect to the remote site
+            session:                 // (string) MD5 hash of the password for the remote site (alternative to password)
+        },
+        ...                          // list as many remote sites as desired
+    ],
+    dependencies: {
+        ImageMagick:                 // full path to ImageMagick (use "/" as path delimiter, required for Windows only)
+        FFMpeg:                      // full path to FFMpeg (use "/" as path delimiter, required for Windows only)
+    }
+	}
+	
+* In addition you can use the included default-cfg.json and just change the name, layout, resolution, and displays to fit your display wall config to get setup quickly. 
+* For instance if you had a display wall of 4 1080p displays arranged in a 2x2 matrix: 
+	* The resolution section would have a height of 1080 and a width of 1920.
+	* The layout would have 2 rows and 2 columns. 
+	* Lastly you would have four entries in the displays section each with a different row and/or column. For our example you have display row 0 and column 0, row 0 and column 1, row 1 and column 0, and row 1 column 1.
+
+
 **Starting the Sage2 Server**
 
 * In the main Sage2 folder, run:
