@@ -42,7 +42,7 @@ To install on a node, execute:
 * /opt/Sage2: Sage2 server 
 * ~/Documents/SAGE2_MEDIA: Images, Videos, Pdfs...etc that are uploaded to the sage2 wall by users.
 * /opt/ffmpeg: depencency needed by sage2 to handle video files
-* /opt/gcc: version 4.8.2 of the gcc compiler, needed by NodeJS as the one included in Centos 6 is too old
+* /opt/gcc: version 4.8.2 of the gcc compiler, needed by NodeJS as the version of gcc included in Centos 6 is too old
 * /opt/x264, /opt/lame, /opt/libtheora, /opt/libvorbis, /opt/libwebp: Dependencies for ffmpeg
 * /opt/tiff: Dependency for Sage2
 * /opt/ImageMagick: Dependency of Sage2
@@ -55,9 +55,10 @@ More in depth instructions (not specific to Rocks) can be found at the [Sage2 we
 
 **Post Installation**
 	
-* Inside the /opt/Sage2 folder, go to the keys folder and edit the GO-linux script adding the ip address you wish to connect to the 	     Sage2 server at inside the servers variable. 
-*       run the GO-linux script with:
+* Inside the /opt/Sage2 folder, go to the keys folder and edit servers variable of the GO-linux script with the ip address of the node that will be running the Sage2 server. 
+*       Then run the GO-linux script with:
 		# ./GO-linux  
+*	This will generate the self signed certificates needed for https connections (note, it is always better to use properly signed certificates but this will funciton if you are just trying to get Sage2 to work).
 * Now go back to the main Sage2 directory and run the command:
 * 		# npm run in
 
