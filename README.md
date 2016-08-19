@@ -22,6 +22,10 @@ Description from a paper on Sage2 (taken from the [Sage2](http://sage2.sagecommo
 	
 In the main folder of the roll:
 
+To get some source files that were too big for Github run:
+
+	# make download
+
 Build the roll using: 
 		
 	# make roll 2>&1 | tee make.log 
