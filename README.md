@@ -43,9 +43,9 @@ If successful, this will build a .iso file called ''Sage2-*.disk1.iso''.
 To install on a node, execute: 
 	
 	# rocks add roll *.iso
-	# rocks enable roll Sage2_Roll
+	# rocks enable roll Sage2-Roll
 	# (cd /export/rocks/install; rocks create distro)
-	# rocks run roll Sage2_Roll | bash
+	# rocks run roll Sage2-Roll | bash
 	
 Then reinstall on the node you want to have the sage server on:
 	
