@@ -22,6 +22,10 @@ Description from a paper on Sage2 (taken from the [Sage2](http://sage2.sagecommo
 	
 In the main folder of the roll:
 
+Run bootstrap.sh with root permissions to get the needed dependencies to build the roll:
+
+	#./bootstrap.sh
+
 To get some source files that were too big for Github run:
 
 	# make download
