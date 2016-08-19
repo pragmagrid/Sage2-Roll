@@ -26,9 +26,11 @@ Run bootstrap.sh with root permissions to get the needed dependencies to build t
 
 	#./bootstrap.sh
 
-To get some source files that were too big for Github run:
+To get some source tar files that were too big for Github run:
 
 	# make download
+	
+This will download the source tar files from the Rocks Cluster's Google Drive and place them in their appropriate locations in the src directory of the roll.
 
 Build the roll using: 
 		
