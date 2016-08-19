@@ -215,4 +215,10 @@ From the [Sage2 bitbucket Wiki](https://bitbucket.org/sage2/sage2/wiki/Configura
 * After activating the SAGE2 Pointer, you can right click to show the radial menu which allows you to do many of the same tasks as the main server webpage but in a format that is better suited to display wall interaction. 
 * Once you launch an app on the sage wall, right clicking it while using the sage2 pointer will bring up any additional functionality that is available for that app. For instance if a video is playing in the player app, right clicking it will let you pause/play, scrub through, and stop the video currently playing.
 
+##Acknowledgements
+
+* Sage2: This software includes SAGE2(tm) middleware developed by the Electronic Visualization
+Laboratory at the University of Illinois at Chicago, and the Laboratory for
+Advanced Visualization and Applications at the University of Hawai'i at Manoa.
+
 
