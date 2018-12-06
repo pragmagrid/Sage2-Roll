@@ -62,12 +62,11 @@ include Rules.mk
 
 
 build:
-	bunzip2 -c $(NAME)-$(VERSION).$(TARBALL_POSTFIX) | $(TAR) -xf -
+	tar -xf $(NAME)-$(VERSION).tar.gz 
 	( 							\
 		cd $(NAME)-$(VERSION);				\
-		NUMTHREADS="$(nproc)";				\
-		PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/ ./configure --enable-gpl --enable-version3 --enable-libmp3lame --enable-libtheora --enable-libx264 --enable-libvorbis --enable-libvpx --enable-libwebp --enable-shared --enable-pthreads;	\
-		$(MAKE) -j$(NUMTHREADS);					\
+		./configure --enable-gpl --enable-libx264 --enable-libx265 --enable-libvorbis --enable-libvpx --enable-shared --extra-cflags="-I/opt/sage2-libvpx/include" --extra-ldflags="-L/opt/sage2-libvpx/lib"; \
+		$(MAKE); \
 	)
 	
 install::

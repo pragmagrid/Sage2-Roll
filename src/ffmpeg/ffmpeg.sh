@@ -1,4 +1,4 @@
-export FFMPEG_HOME=/opt/ffmpeg
+export FFMPEG_HOME=/opt/FFmpeg
 BIN=${FFMPEG_HOME}/bin
 
 if [ -d ${BIN} ]; then
