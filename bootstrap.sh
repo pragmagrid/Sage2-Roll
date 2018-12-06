@@ -61,4 +61,23 @@
 # Revision 1.00 2015/08/18 bsg
 # Initial Release 
 
-yum --enablerepo=updates,base,epel install boost boost-devel yasm yasm-devel cmake libjpeg-devel libpng-devel libvpx-devel ghostscript libmpc-devel gmp-devel mpfr-devel 
+. /opt/rocks/share/devel/src/roll/etc/bootstrap-functions.sh
+
+install nasm
+install libvorbis
+install libvorbis-devel
+
+install nodejs
+install x264-lib
+install x264-dev
+install x265
+install x265-lib
+install x265-dev
+
+compile sage2-libvpx
+install sage2-libvpx
+
+compile ffmpeg
+install FFmpeg
+ldconfig
+
