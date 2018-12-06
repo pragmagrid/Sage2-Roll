@@ -1,5 +1,0 @@
-PKGROOT		= opt
-NAME        = x264
-VERSION     = 20120303
-RELEASE 	= 1
-TARBALL_POSTFIX	= tar.bz2

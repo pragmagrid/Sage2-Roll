@@ -1,3 +1,0 @@
-export IMAGEEXIFTOOL_HOME=/opt/Image-ExifTool
-BIN=${IMAGEEXIFTOOL_HOME}
-export PATH=${PATH}:${BIN}
