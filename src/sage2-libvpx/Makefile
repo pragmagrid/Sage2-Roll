@@ -62,9 +62,9 @@ include Rules.mk
 
 
 build:
-	tar zxf $(NAME)-$(VERSION).tar.gz
+	tar zxf $(PKGNAME)-$(VERSION).tar.gz
 	( 							\
-		cd $(NAME)-$(VERSION);				\
+		cd $(PKGNAME)-$(VERSION);				\
 		./configure --prefix=$(PKGROOT)/$(NAME);	\
 		$(MAKE);					\
 	)
@@ -72,7 +72,7 @@ build:
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)/$(NAME)
 	(							\
-		cd $(NAME)-$(VERSION);				\
+		cd $(PKGNAME)-$(VERSION);				\
 		$(MAKE) DIST_DIR=$(ROOT)/$(PKGROOT)/$(NAME) install;\
 	)
 	mkdir -p $(ROOT)/etc/ld.so.conf.d
