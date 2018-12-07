@@ -60,17 +60,24 @@ REDHAT.ROOT = $(CURDIR)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
 
-
 build:
-		bunzip2 -c $(NAME)-$(VERSION).$(TARBALL_POSTFIX) | $(TAR) -xf - ;
+	git clone --depth 1 https://bitbucket.org/sage2/sage2.git
+	( \
+		cd sage2;  \
+		npm config set jobs 1; \
+		npm config set registry http://registry.npmjs.org/; \
+		env CXX="/usr/bin/g++ -I/opt/FFmpeg/include -L/opt/FFmpeg/lib" npm install;                \
+		cd node_modules/node-demux/; \
+		env CXX="/usr/bin/g++ -I/opt/FFmpeg/include -L/opt/FFmpeg/lib" npm run rebuild; \
+	)
 
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)/$(NAME)
 	(							\
-		cp -r $(NAME)-$(VERSION)/* $(ROOT)/$(PKGROOT)/$(NAME);				\
+		cp -r $(NAME)/* $(ROOT)/$(PKGROOT)/$(NAME);				\
 	)
 	
 clean::
-	rm -rf $(NAME)-$(VERSION)
+	rm -rf $(NAME)
 	rm -f npm-debug.log
 	rm -rf rpmbuild
