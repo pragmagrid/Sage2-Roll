@@ -30,7 +30,6 @@
 	<package>FFmpeg</package>
 	<package>perl-Image-ExifTool</package>
 	<package>sage2-server</package>
-	<package>roll-Sage2-usersguide</package>
 <post>
 /sbin/ldconfig
 setcap 'cap_net_bind_service=+ep' /usr/bin/node
