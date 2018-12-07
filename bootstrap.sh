@@ -61,6 +61,8 @@
 # Revision 1.00 2015/08/18 bsg
 # Initial Release 
 
+export SURL="https://drive.google.com/open?id=1GhZuRdqWzE2mZTJ87UEL0tay-Yh9oCP8"
+
 . /opt/rocks/share/devel/src/roll/etc/bootstrap-functions.sh
 
 install nasm

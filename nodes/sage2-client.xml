@@ -1,11 +1,10 @@
 <?xml version="1.0" standalone="no"?>
 
-<graph>
+<kickstart>
+
 
 	<description>
-
-	The Sage2 Roll
-
+	Rocks Roll of the CalVR Software by the Immersive Visualization Laboratory at Calit2.
 	</description>
 
 	<copyright>
@@ -15,14 +14,10 @@
 	</copyright>
 
 	<changelog>
-	$Log$
-	Revision 1.0 2015/12/18 bsg
 	Initial Release
 	</changelog>
 
-	<!-- add edges here -->
-	
-	<edge from="server" to="sage2-server"/>
-	<edge from="client" to="sage2-client"/>
+	<package>sage2-client</package>
 
-</graph>
+
+</kickstart>

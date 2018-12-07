@@ -17,21 +17,24 @@
 	Initial Release
 	</changelog>
 
-	<package>gcc</package>
-	<package>libogg</package>
+	<package>nodejs</package>
+	<package>nasm</package>
+	<package>x264-libs</package>
+	<package>x264-devel</package>
+	<package>x265</package>
+	<package>x265-libs</package>
+	<package>x265-devel</package>
 	<package>libvorbis</package>
-	<package>libwebp</package>
-	<package>x264</package>
-	<package>ffmpeg</package>
-	<package>node</package>
-	<package>Image-ExifTool</package>
-	<package>ImageMagick</package>
-	<package>sage2</package>
+	<package>libvorbis-devel</package>
+	<package>libvpx</package>
+	<package>FFmpeg</package>
+	<package>perl-Image-ExifTool</package>
+	<package>sage2-server</package>
 	<package>roll-Sage2-usersguide</package>
 <post>
 /sbin/ldconfig
-yum --enablerepo=epel install libmpc-devel
-ln -s /opt/gcc/bin/gcc /usr/bin/cc
+setcap 'cap_net_bind_service=+ep' /usr/bin/node
+cd /opt/sage2/keys && ./GO-linux && cd ..; \
 </post>
 
 
