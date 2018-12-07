@@ -1,4 +1,3 @@
-#
 # $Id$
 #
 # @Copyright@
@@ -55,15 +54,21 @@
 # @Copyright@
 #
 # $Log$
-#
 
--include $(ROLLSROOT)/etc/Rolls.mk
-include Rolls.mk
+REDHAT.ROOT = $(CURDIR)/../../
 
-default: roll
+-include $(ROCKSROOT)/etc/Rules.mk
+include Rules.mk
 
-quickroll: 
-	cd src/sage2-server; make rpm
-	cd src/sage2-client; make rpm
-	make profile
-	make reroll
+build:
+	unzip $(PKGNAME).$(ZIP_POSTFIX)
+
+install::
+	mkdir -p $(ROOT)/$(PKGROOT)/$(NAME)
+	(							\
+		cp -r $(PKGNAME)/* $(ROOT)/$(PKGROOT)/$(NAME);				\
+	)
+	
+clean::
+	rm -rf $(PKGNAME)
+	rm -rf rpmbuild
