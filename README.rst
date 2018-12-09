@@ -1,68 +1,53 @@
-# Sage2-Roll
-##Rocks Roll for UIC/EVL's Sage2 software
-Provides the needed dependencies to run the Sage2 server as well as the server software itself.  
+Sage2 Roll
+======================
 
-Description from a paper on Sage2 (taken from the [Sage2](http://sage2.sagecommons.org/project/publications/) website):
->Current web-based collaboration systems, such as
->Google Hangouts, WebEx, and Skype, primarily enable single
->users to work with remote collaborators through video
->conferencing and desktop mirroring. The original SAGE
->software, developed in 2004 and adopted at over one hundred
->international sites, was designed to enable groups to work in
->front of large shared displays in order to solve problems that
->required juxtaposing large volumes of information in ultra highresolution.
->We have developed SAGE2, as a complete redesign
->and implementation of SAGE, using cloud-based and web
->browser technologies in order to enhance data intensive colocated
->and remote collaboration. 
+.. contents::  
 
-##Building and Installing
+Introduction
+----------------
 
-**Building**
+The `SAGE2 (Scalable Amplified Group Environment) software <http://sage2.sagecommons.org>`_  enables groups to work in front of large shared tile wall displays in order to solve problems that required juxtaposing large volumes of information in ultra high-resolution.  This Rocks roll facilitates the installation of SAGE2 on a Rocks cluster.  A SAGE2 server will be installed on the Rocks cluster frontend and SAGE2 Display Clients will be installed on the compute nodes to drive the tile wall displays.
+
+Prerequisites
+----------------
+If your compute nodes have NVIDIA cards on them where the SAGE2 Display Clients will be installed, we recommend you install the `Rocks CUDA roll from the NBCR project <https://github.com/nbcrrolls/cuda>`_ to install the NVIDIA drivers for your displays.
+
+Building and Installing
+----------------
 	
-In the main folder of the roll:
+Checkout roll distribution from git repo :: 
 
-Run bootstrap.sh with root permissions to get the needed dependencies to build the roll:
+   # git clone https://github.com/pragmagrid/Sage2-Roll
+   # cd Sage2-Roll/
 
-	#./bootstrap.sh
+To build the roll, first execute a script that gets the 
+needed dependencies to build the SAGE2 software :: 
 
-To get some source tar files that were too big for Github run:
+   # ./bootstrap.sh    
 
-	# make download
-	
-This will download the source tar files from the Rocks Cluster's Google Drive and place them in their appropriate locations in the src directory of the roll.
-
-Build the roll using: 
+Note, to build the main SAGE2 roll and some if its dependencies, it is necessary for some packages to be installed on your build host during the process.  Then to build the roll, please run :: 
 		
-	# make roll 2>&1 | tee make.log 
+   # make quickroll 2>&1 | tee make.log 
   	
-If successful, this will build a .iso file called ''Sage2-*.disk1.iso''. 
+If successful, this will build a .iso file called ''Sage2-*.disk1.iso''. Note that the traditional 'make roll' command will also work but will rebuild packages built during the bootstrap.sh execution ::
+	
+To install on a node, execute ::
+	
+   # rocks add roll *.iso
+   # rocks enable roll Sage2
+   # (cd /export/rocks/install; rocks create distro)
+   # rocks run roll Sage2 | bash
+	
+When the roll is finished running, the SAGE2 server will be running on port 9090.  To connect, go to https://<your hostname>:9090.  Note that by default self-signed certificates are generated for the server so you will likely need to add an exception to your browser to view the page.  Once you do, you should see a screen like below:
 
-**Installation**
-	
-To install on a node, execute: 
-	
-	# rocks add roll *.iso
-	# rocks enable roll Sage2
-	# (cd /export/rocks/install; rocks create distro)
-	# rocks run roll Sage2 | bash
-	
+
+
+You should see a 
 Then reinstall on the node you want to have the sage server on:
 	
 	# rocks set host boot compute-X-Y action=install
 	# rocks run host compute-X-Y reboot
 
-**What is installed:**
-	
-* /opt/Sage2: Sage2 server 
-* ~/Documents/SAGE2_MEDIA: Images, Videos, Pdfs...etc that are uploaded to the sage2 wall by users.
-* /opt/ffmpeg: depencency needed by sage2 to handle video files
-* /opt/gcc: version 4.8.2 of the gcc compiler, needed by NodeJS as the version of gcc included in Centos 6 is too old
-* /opt/x264, /opt/lame, /opt/libtheora, /opt/libvorbis, /opt/libwebp: Dependencies for ffmpeg
-* /opt/tiff: Dependency for Sage2
-* /opt/ImageMagick: Dependency of Sage2
-* /opt/Image-ExifTool: Dependency of Sage2 for reading exif data of images
-* /opt/node: version 4.4.7 of NodeJS, the javascript application framework Sage2 is written in.
 
 ##Basic User's Guide
 	
