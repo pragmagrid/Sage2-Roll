@@ -40,13 +40,12 @@ To install on a node, execute ::
 	
 When the roll is finished running, the SAGE2 server will be running on port 9090.  To connect, go to https://<your hostname>:9090.  Note that by default self-signed certificates are generated for the server so you will likely need to add an exception to your browser to view the page.  Once you do, you should see a screen like below:
 
+.. image:: sage2-screenshot.png
 
+To setup the tile wall displays, you will need to reinstall your compute nodes so they will have the x11 environment ::
 
-You should see a 
-Then reinstall on the node you want to have the sage server on:
-	
-	# rocks set host boot compute-X-Y action=install
-	# rocks run host compute-X-Y reboot
+   # rocks set host boot compute-X-Y action=install
+   # rocks run host compute-X-Y reboot
 
 
 ##Basic User's Guide
