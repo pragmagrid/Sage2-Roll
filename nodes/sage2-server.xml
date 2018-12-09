@@ -29,11 +29,42 @@
 	<package>libvpx</package>
 	<package>FFmpeg</package>
 	<package>perl-Image-ExifTool</package>
-	<package>sage2-server</package>
+	<package>sage2</package>
 <post>
+# SAGE2 config
 /sbin/ldconfig
 setcap 'cap_net_bind_service=+ep' /usr/bin/node
-cd /opt/sage2/keys && ./GO-linux && cd ..; \
+cd /opt/sage2/keys &amp;&amp; ./GO-linux &amp;&amp; cd -\
+
+
+# Running SAGE2 under user account -- not working under root when run out of systemctl
+/usr/sbin/useradd -c "SAGE2 Owner" -d /opt/sage2 sage2
+chown -R sage2.sage2 /opt/sage2
+
+<file name="/etc/systemd/system/sage2.service" perms="0644">
+[Unit]
+Description=SAGE2 server
+After=syslog.target network.target
+
+[Service]
+User=sage2
+ExecStart=/bin/bash -c "cd /opt/sage2; /usr/bin/node server.js -l logs/sage2-server.log -i" 
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=sage2
+
+[Install]
+WantedBy=multi-user.target
+</file>
+
+systemctl daemon-reload
+systemctl enable sage2.service
+systemctl start sage2.service
+
+rocks add firewall host=&hostname; action=ACCEPT chain=INPUT network=public protocol=tcp rulename=A52-HTTP-SAGE2 flags="-m state --state NEW --source 0.0.0.0/0.0.0.0" service=9292
+rocks add firewall host=&hostname; action=ACCEPT chain=INPUT network=public protocol=tcp rulename=A52-HTTPS-SAGE2 flags="-m state --state NEW --source 0.0.0.0/0.0.0.0" service=9090
+rocks sync host firewall &hostname;
+
 </post>
 
 
