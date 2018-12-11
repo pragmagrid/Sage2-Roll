@@ -68,13 +68,11 @@ export SURL="https://drive.google.com/open?id=1GhZuRdqWzE2mZTJ87UEL0tay-Yh9oCP8"
 install nasm
 install libvorbis
 install libvorbis-devel
-
 install nodejs
-install x264-lib
-install x264-dev
-install x265
-install x265-lib
-install x265-dev
+
+for lib in x264-lib x264-dev x265 x265-lib x265-dev; do
+  rpm -i RPMS/x86_64/$lib*
+done
 
 compile sage2-libvpx
 install sage2-libvpx
