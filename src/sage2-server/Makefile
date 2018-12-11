@@ -75,9 +75,9 @@ install::
 	mkdir -p $(ROOT)/$(PKGROOT)/$(NAME)
 	(							\
 		cp -r $(NAME)/* $(ROOT)/$(PKGROOT)/$(NAME);				\
-		# this binary has a dependency on libdbus-1.so.3(LIBDBUS_1_3)(64bit) 
-		# which conflicts with existing lib libdbus-1.so.3()(64bit)
-		# don't think it's needed once installed so removing from rpm
+		# this binary has a dependency on libdbus-1.so.3(LIBDBUS_1_3)(64bit)  \
+		# which conflicts with existing lib libdbus-1.so.3()(64bit) \
+		# don't think it's needed once installed so removing from rpm \
 		rm -f $(ROOT)/$(PKGROOT)/$(NAME)/node_modules/electron/dist/electron;				\
 	)
 	
