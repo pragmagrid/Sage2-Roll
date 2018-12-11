@@ -34,7 +34,7 @@
 # SAGE2 config
 /sbin/ldconfig
 setcap 'cap_net_bind_service=+ep' /usr/bin/node
-cd /opt/sage2/keys &amp;&amp; ./GO-linux &amp;&amp; cd -\
+cd /opt/sage2/keys &amp;&amp; ./GO-linux 
 sed -i 's/localhost/&Kickstart_PublicHostname;/' /opt/sage2/config/default-cfg.json 
 
 
