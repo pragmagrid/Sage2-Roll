@@ -62,8 +62,3 @@ include Rolls.mk
 
 default: roll
 
-quickroll: 
-	cd src/sage2-server; make rpm
-	cd src/sage2-client; make rpm
-	make profile
-	make reroll

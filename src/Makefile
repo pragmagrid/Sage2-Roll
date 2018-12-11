@@ -53,10 +53,10 @@
 # @Copyright@
 #
 
-#NPW-include $(shell ../../../../bin/arch).mk
 -include $(shell $(ROCKSROOT)/bin/os).mk
 
-#NPWSRCDIRS = `find . -type d -maxdepth 1 -not -name CVS -not -name .`
+SRCDIRS = sage2-server \
+sage2-client
 
 default:	rpm
 
